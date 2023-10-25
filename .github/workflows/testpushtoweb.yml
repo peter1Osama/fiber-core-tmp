@@ -10,7 +10,7 @@ jobs:
     
     steps:
       - uses: actions/checkout@v3
-
+      
       - name: Install token-transformer
         run: npm install token-transformer
 
@@ -19,6 +19,11 @@ jobs:
 
       - name: Generate Tokens web
         run: node index.js ./output-tokens.json theme-data.js
+
+      - name: Extract branch name
+        shell: bash
+        run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
+        id: extract_branch
   
       - name: Push to Fiber-web
         env:
