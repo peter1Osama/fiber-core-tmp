@@ -1,9 +1,8 @@
 name: Generate web tokens
 
 on:
-  push:
-    branches:
-      - main
+  release:
+    types: [created]
 
 jobs:
   Run_tokens_transformer_and_push_generated_files:
