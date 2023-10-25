@@ -45,6 +45,7 @@ jobs:
           rm -rf fiber-web-temp/web-core-config-public/theme-data-$BRANCH_NAME.js
           cp theme-data-$BRANCH_NAME.js fiber-web-temp
           cd fiber-web-temp
+          npm version patch
           git add .
           git commit -m "Copy theme-data.js from fiber-web-temp"
           git push origin main
