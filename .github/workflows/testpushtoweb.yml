@@ -47,5 +47,5 @@ jobs:
           cd fiber-web-temp
           npm version patch
           git add .
-          git commit -m "Copy theme-data.js from fiber-web-temp"
+          git commit -m "Copy theme-data.js and update package version from fiber-web-temp"
           git push origin main
