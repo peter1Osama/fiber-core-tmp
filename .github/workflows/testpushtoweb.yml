@@ -33,7 +33,7 @@ jobs:
           git config --global user.name 'peter1Osama'
           git config --global user.email 'peter.badrous@btech.com'
           git clone https://user:$ACCESS_TOKEN@github.com/peter1Osama/web-core-config-public.git fiber-web-temp
-          rm -rf fiber-web-temp/web-core-config-public/theme-data.js
+          rm -rf fiber-web-temp/web-core-config-public/theme-data-${{ steps.extract_branch.outputs.branch }}.js
           cp theme-data.js fiber-web-temp
           cd fiber-web-temp
           git add .
