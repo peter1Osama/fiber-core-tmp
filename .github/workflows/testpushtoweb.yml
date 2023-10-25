@@ -29,7 +29,7 @@ jobs:
           git config --global user.email 'peter.badrous@btech.com'
           git clone https://user:$ACCESS_TOKEN@github.com/peter1Osama/web-core-config-public.git fiber-web-temp
           rm -rf fiber-web-temp/web-core-config-public/theme-data.js
-          cp theme-data.js fiber-web-temp/web-core-config-public
+          cp theme-data.js fiber-web-temp/web-core-config-public/
           cd fiber-web-temp
           git add .
           git commit -m "Copy theme-data.js from fiber-web-temp"
